@@ -11,6 +11,7 @@ class MainHero extends Component {
   componentDidMount(){
     mSwiperInit();
     $('.swiper-slide-active.mainHeroSlide').addClass('animate-up');
+
   }
 
   render(){

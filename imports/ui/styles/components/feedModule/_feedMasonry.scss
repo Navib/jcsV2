@@ -1,0 +1,15 @@
+/* Feed Masonry Styles
+/* Developer: Ivan Baena
+*/
+.feed-container {
+  height: 100%;
+  width: 100%;
+
+  .feed-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: green;
+  }
+}

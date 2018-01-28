@@ -1,19 +1,26 @@
 /* Main Hero Styles
 /* Developer: Ivan Baena
 */
+.please {}
+
 .mainHero-wrapper {
   width: 100%;
-  height: 100vh;
   position: relative;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 
   .mainHeroContainer {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    position: relative;
 
     .mainHeroWrapper {
       transform: translate3d(0px, 0px, 0px) !important;
 
       .swiper-slide.mainHeroSlide {
+        height: 100%;
+        overflow: auto;
         text-align: center;
         font-size: 32px;
         background: #fff;
@@ -30,6 +37,8 @@
         -webkit-align-items: center;
         align-items: center;
         position: absolute;
+        top: 0;
+        left: 0;
       }
 
       .mainHeroSlide {
