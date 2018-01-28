@@ -15,6 +15,9 @@ function mSwiperInit() {
       eventsTarget: 'mainHeroContainer'
 
     },
+    clicks: {
+      slideToClickedSlide:true,
+    },
   });
   mainSwiper.on('slideChangeTransitionStart', function () {
     console.log('slide changed');
@@ -23,8 +26,8 @@ function mSwiperInit() {
       var prevIndex = mainSwiper.previousIndex;
       var arrayLength = mainSwiper.slides.length;
 
-        $('.mainHeroSlide:eq('+nextIndex+')').removeClass('animate-up');
-        $('.mainHeroSlide:eq('+activeIndex+')').addClass('animate-up');
+      $('.mainHeroSlide:eq('+nextIndex+')').removeClass('animate-up');
+      $('.mainHeroSlide:eq('+activeIndex+')').addClass('animate-up');
       console.log(activeIndex,  nextIndex, trans);
 
   });
@@ -33,7 +36,8 @@ function mSwiperInit() {
     var nextIndex = mainSwiper.activeIndex + 1;
     var prevIndex = mainSwiper.previousIndex;
     var arrayLength = mainSwiper.slides.length;
-
+    //$('.mainHeroSlide:eq('+nextIndex+')').removeClass('animate-up');
+    //$('.mainHeroSlide:eq('+activeIndex+')').addClass('animate-up');
     //$('.mainHeroSlide:eq('+prevIndex+')').removeClass('animate-up');
   });
 

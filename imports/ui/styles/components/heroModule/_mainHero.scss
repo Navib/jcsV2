@@ -11,7 +11,8 @@
     height: 100%;
 
     .mainHeroWrapper {
-          transform: translate3d(0px, 0px, 0px) !important;
+      transform: translate3d(0px, 0px, 0px) !important;
+
       .swiper-slide.mainHeroSlide {
         text-align: center;
         font-size: 32px;
@@ -38,19 +39,29 @@
         transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
         transition-delay: 0s;
       }
+
       .animate-up {
-          transform: translate3d(0, 0%, 0) scale(1) !important;
+        transform: translate3d(0, 0%, 0) scale(1) !important;
       }
+
       .stay {
         position: absolute;
         top: 0;
         left: 0;
       }
+
       .zdown {
         visibility: hidden;
       }
     }
 
-    .mainHeroPagination {}
+    .mainHeroPagination {
+      span {
+        margin: 10px 0;
+        display: block;
+        border-radius: 0 !important;
+        height: 4em;
+      }
+    }
   }
 }
