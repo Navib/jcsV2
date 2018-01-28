@@ -9,15 +9,19 @@ function mSwiperInit() {
       el: '.mainHeroPagination',
       clickable: true
     },
-    // mousewheel: {
-    //   invert: false,
-    //   releaseOnEdges: true,
-    //   eventsTarget: 'mainHeroContainer'
-    // },
+    mousewheel: {
+      invert: false,
+      releaseOnEdges: true,
+      eventsTarget: 'mainHeroContainer'
+    },
     clicks: {
       slideToClickedSlide: true
     }
   });
+  //mSwiperInit
+  $('.swiper-slide-active.mainHeroSlide').addClass('animate-up');
+  $('body').addClass('stop-scrolling');
+  mainSwiper.mousewheel.disable();
   mainSwiper.on('slideChangeTransitionStart', function() {
     var activeIndex = mainSwiper.activeIndex;
     var nextIndex = mainSwiper.activeIndex + 1;
@@ -26,8 +30,12 @@ function mSwiperInit() {
 
     $('.mainHeroSlide:eq(' + nextIndex + ')').removeClass('animate-up');
 
-    // console.log(activeIndex,  nextIndex, trans);
-
+    if (activeIndex === 4) {
+      $('body').removeClass('stop-scrolling');
+      $('.feed-container').scrollTop(0);
+    } else if (activeIndex < 4) {
+      $('body').addClass('stop-scrolling');
+    }
   });
   mainSwiper.on('transitionStart', function() {
     var activeIndex = mainSwiper.activeIndex;
@@ -43,16 +51,14 @@ function mSwiperInit() {
   var scrollTime = false;
   $('.mainHero-wrapper').on('mousewheel', function(e) {
     if (e.originalEvent.wheelDelta / 120 > 0) {
-      console.log('scrolling up !');
       scrollTime = !scrollTime
       if (scrollTime) {
-        mainSwiper.slideNext(function() {});
+        mainSwiper.slidePrev(function() {});
       }
     } else {
       scrollTime = !scrollTime
-      console.log('scrolling down !');
       if (scrollTime) {
-        mainSwiper.slidePrev(function() {});
+        mainSwiper.slideNext(function() {});
       }
     }
   });

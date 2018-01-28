@@ -27,10 +27,10 @@ function LoadTiles() {
     }
   ];
 
-  let renderTiles = tiles.map((item) => (<div className="feed-tile" key={item._id} style={{
-      background: item.color
-    }}>
-  </div>))
+  let renderTiles = tiles.slice(1).map((item) => (
+      <div className="feed-tile" key={item._id}style={{background: item.color}}>
+      </div>
+  ));
 
   return renderTiles;
 }

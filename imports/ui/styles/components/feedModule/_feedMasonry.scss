@@ -1,15 +1,62 @@
 /* Feed Masonry Styles
 /* Developer: Ivan Baena
 */
-.feed-container {
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  transform: translate3d(0px, 0px, 0px);
+  transition: all 700ms ease;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important;
   height: 100%;
   width: 100%;
+  position: relative;
+}
+
+.feed-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
 
   .feed-wrapper {
     height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden;
-    background: green;
+    background: lightblue;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+
+    .one-one-50 {
+      width: 50%;
+      height: 100%;
+
+      .feed-tile {
+        height: 100%;
+      }
+    }
+
+    .two-two-50 {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-flow: row wrap;
+
+      .feed-tile {
+        height: 100%;
+        height: 50%;
+        width: 50%;
+      }
+    }
+
+    .feed-tile:nth-child(1) {}
   }
 }
