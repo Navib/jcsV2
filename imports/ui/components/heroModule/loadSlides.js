@@ -7,27 +7,27 @@ function HeroSlides() {
     {
       _id: 1,
       src: 'https://www.youtube.com/embed/nz73OSS9h1I?modestbranding=1&autohide=1&showinfo=0&controls=0',
-      color:'blue',
+      color:'#bab4b4',
       zindex: 1
     }, {
       _id: 2,
       src: 'https://www.youtube.com/embed/e1GSwjLoieM?modestbranding=1&autohide=1&showinfo=0&controls=0',
-      color:'purple',
+      color:'#010a10',
       zindex: 2
     }, {
       _id: 3,
       src: 'https://www.youtube.com/embed/OPqSt51kimA?modestbranding=1&autohide=1&showinfo=0&controls=0',
-      color:'green',
+      color:'#084048',
       zindex: 3
     }, {
       _id: 4,
       src: 'https://www.youtube.com/embed/feufY7NFbPo?modestbranding=1&autohide=1&showinfo=0&controls=0',
-      color:'yellow',
+      color:'#2c1d52',
       zindex: 4
     }, {
       _id: 5,
       src: 'https://player.vimeo.com/video/212488303?&title=0&byline=0&portrait=0',
-      color:'black',
+      color:'#4e6a79',
       zindex: 5
     }
   ];

@@ -6,12 +6,12 @@ function LoadFirstTile() {
   let tile = [
     {
       _id: 1,
-      color: 'blue',
+      color: '#989898',
       zindex: 1
     }
   ];
 
-  let renderFirstTiles = tile.slice().map((item) => (  
+  let renderFirstTiles = tile.slice().map((item) => (
       <div className="feed-tile"  key={item._id} style={{background: item.color}}>
       </div>
   ));

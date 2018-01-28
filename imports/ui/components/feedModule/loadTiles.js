@@ -10,25 +10,25 @@ function LoadTiles() {
       zindex: 1
     }, {
       _id: 2,
-      color: 'purple',
+      color: '#ffffff',
       zindex: 2
     }, {
       _id: 3,
-      color: 'green',
+      color: 'black',
       zindex: 3
     }, {
       _id: 4,
-      color: 'yellow',
+      color: 'black',
       zindex: 4
     }, {
       _id: 5,
-      color: 'black',
+      color: '#ffffff',
       zindex: 5
     }
   ];
 
   let renderTiles = tiles.slice(1).map((item) => (
-      <div className="feed-tile" key={item._id}style={{background: item.color}}>
+      <div className="feed-tile arrow_box" key={item._id}style={{background: item.color}}>
       </div>
   ));
 
