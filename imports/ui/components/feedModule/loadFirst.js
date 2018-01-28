@@ -1,22 +1,37 @@
 import React from 'react';
+import SingleTile from './json/singleTiles';
 
-//Load YT VideoSlide
+function LoadFirstTile(id) {
+  let selection = id.props;
+  let tile1 = SingleTile.Tile1;
+  let tile2 = SingleTile.Tile2;
 
-function LoadFirstTile() {
-  let tile = [
-    {
-      _id: 1,
-      color: '#989898',
-      zindex: 1
+  function detectProps(selection) {
+
+    if (selection === '1') {
+      console.log("pops1");
+      let renderFirstTiles = tile1.map((item) => (<div className="feed-tile" key={item._id} style={{
+          background: item.color
+        }}>
+        <h3>{item.title}</h3>
+      </div>));
+
+      return renderFirstTiles;
+
+    } else if (selection === '2') {
+      console.log("pops2");
+      let renderFirstTiles = tile2.map((item) => (<div className="feed-tile" key={item._id} style={{
+          background: item.color
+        }}>
+        <h3>{item.title}</h3>
+      </div>));
+
+      return renderFirstTiles;
     }
-  ];
+  }
 
-  let renderFirstTiles = tile.slice().map((item) => (
-      <div className="feed-tile"  key={item._id} style={{background: item.color}}>
-      </div>
-  ));
+  return detectProps(selection);
 
-  return renderFirstTiles;
 }
 
 module.exports = LoadFirstTile;

@@ -6,6 +6,8 @@ import slideFeed from './slideFeed';
 class FeedMasonry extends Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
+
   }
   componentDidMount(){
     slideFeed();
@@ -16,10 +18,10 @@ class FeedMasonry extends Component {
       <div className="feed-container">
         <div className="feed-wrapper">
           <div className="one-one-50">
-            {LoadFirstTile()}
+            {LoadFirstTile(this.props)}
           </div>
           <div className="two-two-50">
-            {LoadTiles()}
+            {LoadTiles(this.props)}
           </div>
         </div>
       </div>

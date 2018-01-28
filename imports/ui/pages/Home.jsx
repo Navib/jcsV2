@@ -8,6 +8,7 @@ import FeedMasonry from '../../ui/components/feedModule/feedMasonry';
 export const Home = () => <div>
   <div className="jcs-home" id="desktop-sites">
     <MainHero />
-    <FeedMasonry />
+    <FeedMasonry props="1"/>
+    <FeedMasonry props="2"/>
   </div>
 </div>

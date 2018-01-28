@@ -14,8 +14,13 @@ body {
   width: 100%;
   position: relative;
 }
-
+.feed-container:nth-of-type(odd) .feed-wrapper {
+  flex-flow: row-reverse wrap;
+}
 .feed-container {
+  h3 {
+    margin: 0;
+  }
   width: 100%;
   height: auto;
   overflow: hidden;
