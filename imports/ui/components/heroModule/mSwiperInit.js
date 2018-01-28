@@ -28,14 +28,14 @@ function mSwiperInit() {
       console.log(activeIndex,  nextIndex, trans);
 
   });
-mainSwiper.on('transitionStart', function() {
-  var activeIndex = mainSwiper.activeIndex;
-  var nextIndex = mainSwiper.activeIndex + 1;
-  var prevIndex = mainSwiper.previousIndex;
-  var arrayLength = mainSwiper.slides.length;
+  mainSwiper.on('transitionStart', function() {
+    var activeIndex = mainSwiper.activeIndex;
+    var nextIndex = mainSwiper.activeIndex + 1;
+    var prevIndex = mainSwiper.previousIndex;
+    var arrayLength = mainSwiper.slides.length;
 
-  $('.mainHeroSlide:eq('+prevIndex+')').removeClass('animate-up');
-})
+    //$('.mainHeroSlide:eq('+prevIndex+')').removeClass('animate-up');
+  });
 
 
   return mainSwiper;

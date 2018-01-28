@@ -11,6 +11,7 @@
     height: 100%;
 
     .mainHeroWrapper {
+          transform: translate3d(0px, 0px, 0px) !important;
       .swiper-slide.mainHeroSlide {
         text-align: center;
         font-size: 32px;
@@ -27,6 +28,7 @@
         -ms-flex-align: center;
         -webkit-align-items: center;
         align-items: center;
+        position: absolute;
       }
 
       .mainHeroSlide {
