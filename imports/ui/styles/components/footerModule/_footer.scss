@@ -1,15 +1,47 @@
 /* Footer Styles
 /* Developer: Ivan Baena
 */
-
 .jcs-home {
-  padding-bottom: 400px;
+  padding-bottom: 350px;
 }
 
 .footer-container {
   height: 350px;
   width: 100%;
-  background: #444;
   position: absolute;
   bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  .footer-wrapper {
+    border: 1px dashed #444;
+    height: 90%;
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    .social-list {
+      width: 100%;
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+      .social-item {
+        margin: 0 20px;
+      }
+    }
+  }
 }
