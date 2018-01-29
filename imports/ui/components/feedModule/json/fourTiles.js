@@ -86,7 +86,8 @@ let FourTiles = {
       _id: 2,
       color: '#ffffff',
       zoom_class: '',
-      title: 'Third FeedBack'
+      title: 'Stage Buddy review of Greenhouse Ensemble\'s: THE MALTESE WALTER (2016)',
+      text:'“The Maltese Walter” by John Minigan, another fine piece of original work, has a man called Walter, portrayed consummately by Justin Schilling, seeking therapy to overcome his tendency to wander off mid-conversation into the black-and-white world of film noir. R. David Robinson was most enjoyable as the back-stabbing therapist Dr. Eddy, pulling together this delicious story executed with perfection by director Keegan McDonald."'
     }, {
       _id: 3,
       color: 'black',
@@ -103,7 +104,8 @@ let FourTiles = {
       _id: 5,
       color: '#ffffff',
       zoom_class: '',
-      title: 'Third FeedBack'
+      title: 'Kesav Wable, creator of "CUFF"',
+      text:'"Justin is a great collaborator who understands the process of building a scene by combining physicality with the inner life of his character."'
     }
   ]
 }

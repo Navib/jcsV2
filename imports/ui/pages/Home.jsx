@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import MainHero from '../../ui/components/heroModule/mainHero';
 import FeedMasonry from '../../ui/components/feedModule/feedMasonry';
+import FooterMod from '../../ui/components/footerModule/footer';
 
 
 // This component - represents a single page
@@ -14,5 +15,6 @@ export const Home = () => <div>
     <FeedMasonry props="3"/>
     <FeedMasonry props="4"/>
   </div>
+  <FooterMod />
   </div>
 </div>

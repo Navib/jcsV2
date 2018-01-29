@@ -30,10 +30,10 @@ function mSwiperInit() {
 
     $('.mainHeroSlide:eq(' + nextIndex + ')').removeClass('animate-up');
 
-    if (activeIndex === 4) {
+    if (activeIndex === 2) {
       $('body').removeClass('stop-scrolling');
       $('.feed-container').scrollTop(0);
-    } else if (activeIndex < 4) {
+    } else if (activeIndex < 2) {
       $('body').addClass('stop-scrolling');
     }
   });
