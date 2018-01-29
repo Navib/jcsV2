@@ -2,21 +2,23 @@ import React, { Component } from 'react';
 import LoadTiles from './loadTiles';
 import LoadFirstTile from './loadFirst';
 import slideFeed from './slideFeed';
+import reveal from './reveal';
 
 class FeedMasonry extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
 
   }
   componentDidMount(){
     slideFeed();
+    reveal();
+
   }
 
   render(){
     return (
       <div className="feed-container">
-        <div className="feed-wrapper">
+        <div className="feed-wrapper hideme">
           <div className="one-one-50">
             {LoadFirstTile(this.props)}
           </div>

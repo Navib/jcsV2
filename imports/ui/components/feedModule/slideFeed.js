@@ -10,11 +10,13 @@ function slideFeed() {
     let scrollPos = $(document).scrollTop();
     //Get Div Height
     let divHeight = $('.feed-wrapper').height();
+    let divHeightA = $('.feed-wrapper:eq(2)').height();
     //Get screen transform height
     let newHeight = divHeight - scrollPos;
+
+    let para = window.pageYOffset - 100 ;
     //Fire Animation Desktop
     if (screen.width > 1023) {
-
       if (scrollPos > 0) {
         $('body').css({'transform':'translate3d(0, -100vh, 0)'});
         // $('body').css({'transform':'translate3d(0, -'+newHeight+'px, 0)'});

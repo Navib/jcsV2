@@ -1,5 +1,6 @@
 .feed-tile:nth-child(1).arrow_box {
 	position: relative;
+	z-index: 99;
 }
 .feed-tile:nth-child(1).arrow_box:after, .feed-tile:nth-child(1).arrow_box:before {
 	left: 100%;
@@ -10,23 +11,26 @@
 	width: 0;
 	position: absolute;
 	pointer-events: none;
+	z-index: 99;
 }
 
 .feed-tile:nth-child(1).arrow_box:after {
   border-color: rgba(136, 183, 213, 0);
   border-left-color: white;
-  border-width: 30px;
-  margin-top: -30px;
+  border-width: 20px;
+  margin-top: -20px;
 }
 .feed-tile:nth-child(1).arrow_box:before {
 	border-color: rgba(136, 183, 213, 0);
 	border-left-color: white;
-	border-width: 36px;
-	margin-top: -36px;
+	border-width: 20px;
+	margin-top: -20px;
+	transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 //LAST CHILD
 .feed-tile:nth-child(4).arrow_box {
 	position: relative;
+	z-index: 99;
 }
 .feed-tile:nth-child(4).arrow_box:after, .feed-tile:nth-child(4).arrow_box:before {
 	right: 100%;
@@ -37,17 +41,43 @@
 	width: 0;
 	position: absolute;
 	pointer-events: none;
+	z-index: 99;
 }
 
 .feed-tile:nth-child(4).arrow_box:after {
 	border-color: rgba(136, 183, 213, 0);
 	border-right-color: white;
-	border-width: 30px;
-	margin-top: -30px;
+	border-width: 20px;
+	margin-top: -20px;
 }
 .feed-tile:nth-child(4).arrow_box:before {
 	border-color: rgba(194, 225, 245, 0);
 	border-right-color: white;
-	border-width: 36px;
-	margin-top: -36px;
+	border-width: 20px;
+	margin-top: -20px;
+	transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/*Hover*/
+
+.feed-tile:nth-child(4):hover.arrow_box:before{
+	border-color: rgba(194, 225, 245, 0);
+	border-right-color: white;
+	border-width: 35px;
+	margin-top: -35px;
+}
+.feed-tile:nth-child(1):hover.arrow_box:before {
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: white;
+	border-width: 35px;
+	margin-top: -35px;
+}
+.feed-tile:nth-child(2).arrow_box, .feed-tile:nth-child(3).arrow_box {
+	overflow: hidden;
+}
+.feed-tile:nth-child(2).arrow_box .content-wrapper, .feed-tile:nth-child(3).arrow_box .content-wrapper {
+	transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+	transform: scale(1);
+}
+.fixes {
+	transform: scale(1.1) !important;
 }

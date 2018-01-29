@@ -1,76 +1,58 @@
 import React from 'react';
-
-//Load YT VideoSlide
+import FourTiles from './json/fourTiles';
 
 function LoadTiles(id) {
   let selection = id.props;
+  let tiles1 = FourTiles.Tile1;
+  let tiles2 = FourTiles.Tile2;
+  let tiles3 = FourTiles.Tile3;
+  let tiles4 = FourTiles.Tile4;
 
-  //Declare variable
-  let tiles = [];
-  let tiles1 = [
-    {
-      _id: 2,
-      color: '#ffffff',
-      zindex: 2,
-      title: 'First Feedback'
-    }, {
-      _id: 3,
-      color: 'black',
-      zindex: 3,
-      title: 'First Feedback'
-    }, {
-      _id: 4,
-      color: 'black',
-      zindex: 4,
-      title: 'First Feedback'
-    }, {
-      _id: 5,
-      color: '#ffffff',
-      zindex: 5,
-      title: 'First Feedback'
-    }
-  ];
-  let tiles2 = [
-    {
-      _id: 2,
-      color: '#ffffff',
-      zindex: 2
-    }, {
-      _id: 3,
-      color: 'black',
-      zindex: 3,
-      title: 'Second FeedBack'
-    }, {
-      _id: 4,
-      color: 'black',
-      zindex: 4,
-      title: 'Second FeedBack'
-    }, {
-      _id: 5,
-      color: '#ffffff',
-      zindex: 5,
-      title: 'Second FeedBack'
-    }
-  ];
   function detectProps(selection) {
-    console.log(selection);
-
     if (selection === '1') {
-      console.log("pops1");
-      let renderTiles = tiles1.map((item) => (<div className="feed-tile arrow_box" key={item._id} style={{
-          background: item.color
-        }}>
-        <h3>{item.title}</h3>
+      let renderTiles = tiles1.map((item) => (<div className="feed-tile arrow_box" key={item._id}>
+        <div className="content-wrapper" style={{
+            backgroundImage:'url('+item.bg_img+')',backgroundRepeat:'no-repeat',backgroundSize:'cover', backgroundColor: item.color, backgroundPosition: 'center top'
+          }}>
+          <p className="content-quote">{item.text}</p>
+          <h3>{item.title}</h3>
+        </div>
       </div>));
 
       return renderTiles;
 
     } else if (selection === '2') {
-      console.log("pops2");
-      let renderTiles = tiles2.map((item) => (<div className="feed-tile arrow_box" key={item._id} style={{
-          background: item.color
-        }}>
-        <h3>{item.title}</h3>
+      let renderTiles = tiles2.map((item) => (<div className="feed-tile arrow_box" key={item._id}>
+        <div className="content-wrapper" style={{
+            backgroundImage:'url('+item.bg_img+')',backgroundRepeat:'no-repeat',backgroundSize:'cover', backgroundColor: item.color, backgroundPosition: 'center top'
+          }}>
+          <p className="content-quote">{item.text}</p>
+          <h3>{item.title}</h3>
+        </div>
+      </div>));
+
+      return renderTiles;
+
+    } else if (selection === '3') {
+      let renderTiles = tiles3.map((item) => (<div className="feed-tile arrow_box" key={item._id}>
+        <div className="content-wrapper" style={{
+            backgroundImage:'url('+item.bg_img+')',backgroundRepeat:'no-repeat',backgroundSize:'cover', backgroundColor: item.color, backgroundPosition: 'center top'
+          }}>
+          <p className="content-quote">{item.text}</p>
+          <h3>{item.title}</h3>
+        </div>
+      </div>));
+
+      return renderTiles;
+
+    } else if (selection === '4') {
+      let renderTiles = tiles4.map((item) => (<div className="feed-tile arrow_box" key={item._id}>
+        <div className="content-wrapper" style={{
+            backgroundImage:'url('+item.bg_img+')',backgroundRepeat:'no-repeat',backgroundSize:'cover', backgroundColor: item.color, backgroundPosition: 'center top'
+          }}>
+          <p className="content-quote">{item.text}</p>
+          <h3>{item.title}</h3>
+        </div>
       </div>));
 
       return renderTiles;
