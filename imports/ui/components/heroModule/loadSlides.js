@@ -36,7 +36,7 @@ function HeroSlides() {
   let jcsVideos = ytVids.map((item) => (
     <div className="swiper-slide mainHeroSlide" key={item._id} style={{background:item.color}}>
       <div className="video-wrapper">
-        <video loop autoPlay preload="none" className="fullscreen-bg__video embed-responsive-item" id="home-video">
+        <video loop controls autoPlay preload="none" className="fullscreen-bg__video embed-responsive-item" id="home-video">
           <source src={item.src} type="video/mp4"/>
         </video>
       </div>

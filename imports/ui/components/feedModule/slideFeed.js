@@ -14,12 +14,12 @@ function slideFeed() {
     //Get screen transform height
     let newHeight = divHeight - scrollPos;
 
-    let para = window.pageYOffset - 100 ;
+    let para = window.pageYOffset - newHeight ;
     //Fire Animation Desktop
     if (screen.width > 1023) {
       if (scrollPos > 0) {
         $('body').css({'transform':'translate3d(0, -100vh, 0)'});
-        // $('body').css({'transform':'translate3d(0, -'+newHeight+'px, 0)'});
+        //$('body').css({'transform':'translate3d(0, -'+newHeight+'px, 0)'});
       }else if (scrollPos === 0){
         $('body').css({'transform':'translate3d(0, 0, 0)'});
       }
